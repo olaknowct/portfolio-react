@@ -1,0 +1,19 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+
+    &-typed {
+        font-size: 3.8rem;
+        color: #fff;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+        font-weight: 100;
+        letter-spacing: 7px;
+        display: flex;
+        justify-content: center;
+    }
+
+    & .sub {
+        font-size: 1.5rem;
+    }
+}

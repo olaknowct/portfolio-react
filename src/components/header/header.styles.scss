@@ -1,0 +1,43 @@
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    margin: 0.5rem 0.5rem;
+    background-color: white;
+
+    &:hover {
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    &.fb:hover {
+        background-color: #3b5998;
+    }
+
+    &.twtr:hover {
+        background-color: #1da1f2;
+    }
+
+    &.lkn:hover {
+        background-color: #0e76a8;
+    }
+
+    &.github:hover {
+        background-color: grey;
+    }
+
+    &.ig:hover {
+        background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+        );
+    }
+}
