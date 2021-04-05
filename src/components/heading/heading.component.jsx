@@ -9,6 +9,7 @@ const Heading = () => {
                 className="heading-typed"
                 strings={["CHRISTOPHER OLANO"]}
                 typeSpeed={10}
+                showCursor={false}
             />
 
             <Typed
@@ -23,6 +24,7 @@ const Heading = () => {
                 ]}
                 typeSpeed={70}
                 backSpeed={50}
+                showCursor={false}
                 // attr="placeholder"
                 loop
             ></Typed>
