@@ -40,4 +40,22 @@
             #285aeb 90%
         );
     }
+
+    @media screen and (max-width: 800px) {
+        height: 1.3rem;
+        width: 1.3rem;
+        margin: 0.2rem 0.2rem;
+    }
+
+    @media screen and (max-width: 375px) {
+        height: 1.3rem;
+        width: 1.3rem;
+        margin: 0.2rem 0.2rem;
+    }
+
+    @media screen and (max-width: 414px) {
+        height: 1.3rem;
+        width: 1.3rem;
+        margin: 0.2rem 0.2rem;
+    }
 }

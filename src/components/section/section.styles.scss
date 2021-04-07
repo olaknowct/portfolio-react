@@ -9,4 +9,25 @@
         text-decoration: none;
         opacity: 0.5;
     }
+
+    @media screen and (max-width: 800px) {
+        font-size: 0.9rem;
+        .section {
+            padding: 0 8px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: 0.9rem;
+        .section {
+            padding: 0 8px;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+        font-size: 0.9rem;
+        .section {
+            padding: 0 8px;
+        }
+    }
 }

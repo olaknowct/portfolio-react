@@ -24,7 +24,7 @@ class ToolsPage extends React.Component {
                 "boostrap",
                 "gitlab",
                 "heroku",
-                "html",
+                "HTMLCSS",
                 "firebase",
                 "aws",
                 "mongodb",
