@@ -41,6 +41,15 @@ const AboutPage = () => {
                     backSpeed={50}
                     showCursor={false}
                 />
+                <Typed
+                    strings={[
+                        "<p>On the other hand, the other half loves sports and a fitness enthusiastic.</p>",
+                    ]}
+                    startDelay={25000}
+                    typeSpeed={30}
+                    backSpeed={50}
+                    showCursor={false}
+                />
             </div>
         </div>
     );
