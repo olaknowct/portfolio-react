@@ -51,10 +51,17 @@ class CertificatePage extends React.Component {
             <div className="certificates fade-in">
                 {certificates.map((certificate) => (
                     <div class="certificate">
-                        <img src={`./img/certificate/${certificate.imgPath}`} />
+                        <img
+                            src={`./img/certificate/${certificate.imgPath}`}
+                            alt={certificate.cert}
+                        />
                         <span>{certificate.cert}</span>
                         <p>
-                            <a href={certificate.link} target="_blank">
+                            <a
+                                href={certificate.link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <strong>
                                     <em>Click Here for validation</em>
                                 </strong>

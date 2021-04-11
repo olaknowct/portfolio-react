@@ -9,8 +9,6 @@ import "./card-item.styles.scss";
 const CardItem = ({ portfolio }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [index, setIndex] = useState(0);
-    const [currentPage, setCurrentPage] = useState(0);
-    const [data, setData] = useState([]);
     const {
         imgUrl,
         name,
@@ -27,7 +25,7 @@ const CardItem = ({ portfolio }) => {
     return (
         <div className="card">
             <div className="front">
-                <img src={imgUrl} alt="" />
+                <img src={imgUrl} alt={name} />
             </div>
 
             <div className="back">
@@ -43,6 +41,7 @@ const CardItem = ({ portfolio }) => {
                                 data-tip="watch demo via clipchamp"
                                 href={demoVideo.clipchamp}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <img src="./img/demovid.png" alt="" />
                             </a>
@@ -62,6 +61,7 @@ const CardItem = ({ portfolio }) => {
                             href={urlProject}
                             target="_blank"
                             data-tip="navigate to project"
+                            rel="noreferrer"
                         >
                             <img src="./img/link.png" alt="" />
                         </a>
@@ -71,6 +71,7 @@ const CardItem = ({ portfolio }) => {
                                 data-tip="Repository Link"
                                 href={repo.github}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <img src="./img/github.png" alt="" />
                             </a>

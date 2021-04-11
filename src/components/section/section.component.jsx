@@ -3,7 +3,7 @@ import "./section.styles.scss";
 import { Link } from "react-router-dom";
 
 const Section = () => {
-    React.useEffect(() => {
+    useEffect(() => {
         const sectionClass = window.document.querySelector(".sections");
         const handleHover = function (e) {
             if (e.target.classList.contains("section")) {

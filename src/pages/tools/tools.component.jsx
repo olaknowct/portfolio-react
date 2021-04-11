@@ -24,7 +24,7 @@ class ToolsPage extends React.Component {
                 "boostrap",
                 "gitlab",
                 "heroku",
-                "HTMLCSS",
+                "htmlcss",
                 "firebase",
                 "aws",
                 "mongodb",
@@ -44,7 +44,7 @@ class ToolsPage extends React.Component {
             <div className="tools fade-in">
                 {tools.map((tool) => (
                     <div class="tool">
-                        <img src={`./img/tools/${tool}.png`} />
+                        <img src={`./img/tools/${tool}.png`} alt={tool} />
                         <span>{tool}</span>
                     </div>
                 ))}
