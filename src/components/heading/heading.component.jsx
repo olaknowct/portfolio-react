@@ -1,34 +1,45 @@
-import React from "react";
-import "./heading.styles.scss";
-import Typed from "react-typed";
+import React, { useEffect } from 'react';
+import './heading.styles.scss';
+import Typed from 'typed.js';
 
 const Heading = () => {
-    return (
-        <div className="heading">
-            <Typed
-                className="heading-typed"
-                strings={["CHRISTOPHER OLANO"]}
-                typeSpeed={10}
-                showCursor={false}
-            />
+  const heading = React.useRef(null);
+  const subHeading = React.useRef(null);
 
-            <Typed
-                className="heading-typed sub"
-                strings={[
-                    "Software Engineer",
-                    "Full Stack Developer",
-                    "Product Specialist",
-                    "RF Engineer",
-                    "Electronics Engineer",
-                    "Eletronics Technician",
-                ]}
-                typeSpeed={70}
-                backSpeed={50}
-                showCursor={false}
-                // attr="placeholder"
-                loop
-            ></Typed>
-        </div>
-    );
+  useEffect(() => {
+    const typedHeading = new Typed(heading.current, {
+      strings: ['CHRISTOPHER OLANO'],
+      typeSpeed: 10,
+      showCursor: false,
+    });
+
+    const typedSubHeading = new Typed(subHeading.current, {
+      strings: [
+        'Software Engineer',
+        'Full Stack Developer',
+        'Product Specialist',
+        'RF Engineer',
+        'Electronics Engineer',
+        'Eletronics Technician',
+      ],
+
+      typeSpeed: 70,
+      backSpeed: 50,
+      showCursor: false,
+      loop: true,
+    });
+
+    return () => {
+      typedHeading.destroy();
+      typedSubHeading.destroy();
+    };
+  });
+
+  return (
+    <div className='heading'>
+      <span className='heading-typed' ref={heading} />
+      <span className='heading-typed sub' ref={subHeading} />
+    </div>
+  );
 };
 export default Heading;
