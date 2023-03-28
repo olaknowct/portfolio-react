@@ -1,56 +1,59 @@
-import React from "react";
-import "./tools.styles.scss";
+import React from 'react';
+import './tools.styles.scss';
+import { ReactSVG } from 'react-svg';
 
 class ToolsPage extends React.Component {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            tools: [
-                "javascript",
-                "react",
-                "redux",
-                "sass",
-                "Jest",
-                "jquery",
-                "nodejs",
-                "expressjs",
-                "git",
-                "php",
-                "laravel",
-                "Codeigniter",
-                "mysql",
-                "phpmyadmin",
-                "boostrap",
-                "gitlab",
-                "heroku",
-                "htmlcss",
-                "firebase",
-                "aws",
-                "mongodb",
-                "godaddy",
-                "cpannel",
-                "postman",
-                "netlify",
-                "liquidweb",
-                "vscode",
-            ],
-        };
-    }
-    render() {
-        const tools = this.state.tools;
+    this.state = {
+      tools: [
+        'JavaScript',
+        'ReactJs',
+        'Redux',
+        'SASS',
+        'Jest',
+        'jQuery',
+        'NodeJs',
+        'ExpressJs',
+        'Git',
+        'PHP',
+        'Laravel',
+        'codeIgniter',
+        'MySql',
+        'phpMyAdmin',
+        'BootStrap',
+        'Gitlab',
+        'Github',
+        'Heroku',
+        'HTML',
+        'CSS',
+        'Firebase',
+        'AWS',
+        'MongoDB',
+        'GoDaddy',
+        'Cpanel',
+        'Postman',
+        'Netlify',
+        'LiquidWeb',
+        'VsCode',
+      ],
+    };
+  }
+  render() {
+    const tools = this.state.tools;
 
-        return (
-            <div className="tools fade-in">
-                {tools.map((tool) => (
-                    <div class="tool">
-                        <img src={`./img/tools/${tool}.png`} alt={tool} />
-                        <span>{tool}</span>
-                    </div>
-                ))}
-            </div>
-        );
-    }
+    return (
+      <div className='tools fade-in'>
+        {tools.map((tool) => (
+          <div class='tool'>
+            <ReactSVG src={`img/tools/svgs/${tool.toLocaleLowerCase()}.svg`} />
+            <span>{tool}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default ToolsPage;
