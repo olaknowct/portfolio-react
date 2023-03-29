@@ -1,33 +1,34 @@
 .sections {
-    display: flex;
-    justify-content: center;
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 
+  .section {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.9rem;
     .section {
-        padding: 10px 15px;
-        cursor: pointer;
-        text-decoration: none;
-        opacity: 0.5;
+      padding: 0 8px;
     }
+  }
 
-    @media screen and (max-width: 800px) {
-        font-size: 0.9rem;
-        .section {
-            padding: 0 8px;
-        }
+  @media screen and (max-width: 375px) {
+    font-size: 0.9rem;
+    .section {
+      padding: 0 8px;
     }
+  }
 
-    @media screen and (max-width: 375px) {
-        font-size: 0.9rem;
-        .section {
-            padding: 0 8px;
-        }
+  @media screen and (max-width: 414px) {
+    font-size: 0.9rem;
+    .section {
+      padding: 0 8px;
     }
-
-    @media screen and (max-width: 414px) {
-        font-size: 0.9rem;
-        .section {
-            padding: 0 8px;
-        }
-    }
+  }
 }
