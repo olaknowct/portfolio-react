@@ -46,9 +46,14 @@ class ToolsPage extends React.Component {
     return (
       <div className='tools fade-in'>
         {tools.map((tool) => (
-          <div class='tool'>
-            <ReactSVG src={`img/tools/svgs/${tool.toLocaleLowerCase()}.svg`} />
-            <span>{tool}</span>
+          <div className='tool'>
+            <div className='tool-svg__box'>
+              <ReactSVG
+                className='tool-svg__svg'
+                src={`img/tools/svgs/${tool.toLocaleLowerCase()}.svg`}
+              />
+            </div>
+            <span className='tool-name'>{tool}</span>
           </div>
         ))}
       </div>
