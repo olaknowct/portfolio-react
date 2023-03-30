@@ -1,6 +1,5 @@
-.cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 5rem;
 }
