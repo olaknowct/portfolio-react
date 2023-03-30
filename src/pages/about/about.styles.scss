@@ -1,14 +1,11 @@
-.about {
-  margin: 5rem 10rem;
+.about-me {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   img {
     height: 36rem;
-  }
 
-  @media screen and (max-width: 1200px) {
-    img {
+    @media screen and (max-width: 1200px) {
       height: 26rem;
     }
   }
@@ -20,6 +17,7 @@
       height: 24rem;
     }
   }
+
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
     margin-top: 2rem;
@@ -27,53 +25,44 @@
       height: 24rem;
     }
   }
-}
 
-.description {
-  margin-top: 2rem;
-  align-items: center;
-  text-align: center;
-
-  font-size: 1.2rem;
-  font-weight: 100;
-
-  .about-me_dev {
+  &__dev {
     background-color: #ffffff;
     color: black;
   }
 
-  @media screen and (max-width: 1400px) {
-    margin: 2rem;
+  &__description {
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+
+    font-size: 1.2rem;
+    font-weight: 100;
+
+    @media screen and (max-width: 1400px) {
+      margin: 2rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 0.9rem;
+    }
   }
 
-  @media screen and (max-width: 1200px) {
-    font-size: 1rem;
-  }
+  &__img {
+    justify-content: center;
+    display: flex;
 
-  @media screen and (max-width: 900px) {
-    font-size: 0.9rem;
-  }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-  @media screen and (max-width: 414px) and (min-width: 376px) {
-  }
-}
-
-.image-container {
-  justify-content: center;
-  display: flex;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  @media screen and (max-width: 1200px) and (min-width: 415px) {
-  }
-
-  @media screen and (max-width: 375px) {
-  }
-
-  @media screen and (max-width: 900px) {
-    text-align: justify;
+    @media screen and (max-width: 900px) {
+      text-align: justify;
+    }
   }
 }

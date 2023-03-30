@@ -1,39 +1,28 @@
-.card {
-    // cursor: pointer;
-    margin: 1.5rem 0.5rem;
-    width: 15rem;
-    height: 17rem;
-    position: relative;
+.portfolio-card {
+  //   cursor: pointer;
+  justify-content: center;
+  margin: 1.5rem 0.5rem;
+  width: 15rem;
+  height: 17rem;
 
-    // overflow: hidden;
-    &:hover > .front {
-        transform: perspective(600px) rotateY(-180deg);
-    }
-    &:hover > .back {
-        transform: perspective(600px) rotateY(0deg);
-    }
-}
+  // overflow: hidden;
+  &:hover > &-front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  &:hover > &-back {
+    transform: perspective(600px) rotateY(0deg);
+  }
 
-.front,
-.back {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform 0.6s linear;
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
-}
-.front {
+  &-front {
     transform: perspective(600px) rotateY(0deg);
 
     img {
-        margin-left: auto;
-        margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
-}
-.back {
+  }
+
+  &-back {
     width: 272px;
     height: 272px;
     color: #2c3e50;
@@ -42,46 +31,59 @@
     transform: perspective(600px) rotateY(180deg);
 
     button {
-        color: #2c3e50;
-        background-color: transparent;
-        border: transparent;
+      color: #2c3e50;
+      background-color: transparent;
+      border: transparent;
 
-        button:active {
-            outline: none;
-        }
+      button:active {
+        outline: none;
+      }
     }
 
     span {
-        height: 10rem;
-        padding: 1rem;
-        text-align: center;
-        font-size: 0.6rem;
+      height: 10rem;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.6rem;
     }
 
-    &-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 0.7rem;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.7rem;
+    }
+  }
 
-        .sm {
-            button,
-            a {
-                cursor: pointer;
+  &-front,
+  &-back {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s linear;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+  }
 
-                font-size: 0.6rem;
+  &__actions {
+    button,
+    a {
+      cursor: pointer;
 
-                img {
-                    width: 2.3rem;
-                    height: 2.3rem;
-                    transition: all 0.2s;
-                    padding: 0.2rem 0.2rem;
+      font-size: 0.6rem;
 
-                    &:hover {
-                        padding: 0 0;
-                    }
-                }
-            }
+      img {
+        width: 2.3rem;
+        height: 2.3rem;
+        transition: all 0.2s;
+        padding: 0.2rem 0.2rem;
+
+        &:hover {
+          padding: 0 0;
         }
+      }
     }
+  }
 }

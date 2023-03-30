@@ -15,18 +15,18 @@ const CardItem = ({ portfolio }) => {
   const nextImage = gallery[(index + 1) % gallery.length];
   const prevImage = gallery[(index + gallery.length - 1) % gallery.length];
   return (
-    <div className='card'>
-      <div className='front'>
+    <div className='portfolio-card'>
+      <div className='portfolio-card-front'>
         <img src={imgUrl} alt={name} />
       </div>
 
-      <div className='back'>
-        <div className='back-content'>
+      <div className='portfolio-card-back'>
+        <div className='portfolio-card-back__content'>
           <h2>{name}</h2>
           <span>
             {name} {shortDescription}
           </span>
-          <div className='sm'>
+          <div className='portfolio-card__actions'>
             {demoVideo.isAvailable ? (
               <a
                 className='demovid'
