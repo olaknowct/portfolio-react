@@ -17,4 +17,5 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-@import 'animations';
+@import 'sass/utilities';
+@import 'sass/animations';
