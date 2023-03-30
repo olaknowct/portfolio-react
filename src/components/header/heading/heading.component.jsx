@@ -36,9 +36,11 @@ const Heading = () => {
   });
 
   return (
-    <div className='heading'>
-      <span className='heading-typed' ref={heading} />
-      <span className='heading-typed sub' ref={subHeading} />
+    <div className='header-text'>
+      <h1 className='heading'>
+        <span className='heading-primary' ref={heading} />
+        <span className='heading-sub' ref={subHeading} />
+      </h1>
     </div>
   );
 };
