@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import './navigation.styles.scss';
 import { Link } from 'react-router-dom';
 
-const Section = () => {
+const Navigation = () => {
   useEffect(() => {
-    const sectionClass = window.document.querySelector('.sections');
+    const sectionClass = window.document.querySelector('.navigations');
     const handleHover = function (e) {
       if (e.target.classList.contains('section')) {
         const link = e.target;
@@ -24,21 +24,21 @@ const Section = () => {
     // });
   });
   return (
-    <div className='sections'>
-      <Link className='section' to='/portfolio'>
+    <nav className='navigations margin-bottom-sm'>
+      <Link className='navigation' to='/portfolio'>
         Works
       </Link>
-      <Link className='section' to='/about'>
+      <Link className='navigation' to='/about'>
         IAM
       </Link>
-      <Link className='section' to='/tools'>
+      <Link className='navigation' to='/tools'>
         ToolBox
       </Link>
-      <Link className='section' to='/certificate'>
+      <Link className='navigation' to='/certificate'>
         Earned !Given
       </Link>
-    </div>
+    </nav>
   );
 };
 
-export default Section;
+export default Navigation;

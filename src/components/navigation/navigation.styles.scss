@@ -1,8 +1,7 @@
-.sections {
+.navigations {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
 
   a:visited,
   a:hover,
@@ -12,7 +11,7 @@
     color: #ffeec0;
   }
 
-  .section {
+  .navigation {
     padding: 10px 15px;
     cursor: pointer;
     text-decoration: none;
@@ -21,21 +20,21 @@
 
   @media screen and (max-width: 800px) {
     font-size: 0.9rem;
-    .section {
+    .navigation {
       padding: 0 8px;
     }
   }
 
   @media screen and (max-width: 375px) {
     font-size: 0.9rem;
-    .section {
+    .navigation {
       padding: 0 8px;
     }
   }
 
   @media screen and (max-width: 414px) {
     font-size: 0.9rem;
-    .section {
+    .navigation {
       padding: 0 8px;
     }
   }
