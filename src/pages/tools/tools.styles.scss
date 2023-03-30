@@ -4,32 +4,13 @@
   row-gap: 3rem;
   justify-content: center;
   align-items: center;
-  margin: 0 5rem;
+
   @media screen and (max-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
   }
 
   @media screen and (max-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.tool {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  &-svg__svg {
-    width: 100px;
-
-    @media screen and (max-width: 1200px) {
-      width: 70px;
-    }
-    @media screen and (max-width: 800px) {
-      width: 50px;
-    }
   }
 }
 
