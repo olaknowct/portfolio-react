@@ -3,8 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 0 5rem;
 
   @media screen and (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
@@ -41,7 +39,6 @@
 .certificate {
   display: flex;
   flex-direction: column;
-  margin: 2rem 2rem;
 
   &-overlay {
     background-color: rgba(0, 0, 0, 0.486);
