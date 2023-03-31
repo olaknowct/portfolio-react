@@ -6,9 +6,9 @@ const Navigation = () => {
   useEffect(() => {
     const sectionClass = window.document.querySelector('.navigations');
     const handleHover = function (e) {
-      if (e.target.classList.contains('section')) {
+      if (e.target.classList.contains('navigation')) {
         const link = e.target;
-        const siblings = link.closest('.sections').querySelectorAll('.section');
+        const siblings = link.closest('.navigations').querySelectorAll('.navigation');
 
         siblings.forEach((el) => {
           if (el !== link) el.style.opacity = this;
