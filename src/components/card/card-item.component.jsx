@@ -22,11 +22,11 @@ const CardItem = ({ portfolio }) => {
 
       <div className='portfolio-card-back'>
         <div className='portfolio-card-back__content'>
-          <h2>{name}</h2>
+          <h1>{name}</h1>
           <span>
             {name} {shortDescription}
           </span>
-          <div className='portfolio-card__actions'>
+          <div className='portfolio-card-back__actions'>
             {demoVideo.isAvailable ? (
               <a
                 className='demovid'
