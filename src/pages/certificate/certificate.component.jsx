@@ -1,35 +1,28 @@
 import React, { useState } from 'react';
-import Modal from 'react-modal';
+import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
 import './certificate.styles.scss';
 
 const CertificatePage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [curImage, setCurImage] = useState('');
+  const [title, setTitle] = useState('');
 
-  const handleOpenModal = (e, imgPath) => {
+  const handleOpenModal = (e, { imgPath, cert: name }) => {
     // const hasHideEl = e.target.classList.contains('hide');
     const targeted = e.target.innerHTML;
 
     if (targeted === '🔎') {
       setIsOpen(true);
       setCurImage(imgPath);
+      setTitle(name);
     }
   };
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      transform: 'translate(-50%, -50%)',
-      padding: 0,
-      background: 'unset',
-      border: 'none',
-      overflow: 'unset',
-      zIndex: 2,
-    },
-  };
+  const slides = [{ src: `./img/certificate/${curImage}`, height: 700, title }];
+
   const certificates = [
     {
       cert: 'The Complete Javascript Course 2023: From Zero to Expert!',
@@ -64,44 +57,41 @@ const CertificatePage = () => {
     },
   ];
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
   return (
     <>
       <div className='certificates fade-in'>
         {certificates.map((certificate) => (
           <div className='certificate'>
-            <div className='certificate-img__box'>
-              <img src={`./img/certificate/${certificate.imgPath}`} alt={certificate.cert} />
+            <img src={`./img/certificate/${certificate.imgPath}`} alt={certificate.cert} />
 
-              <div className='certificate-overlay hide'></div>
-              <div
-                onClick={(e) => handleOpenModal(e, certificate.imgPath)}
-                className='certificate-zoom hide'
-              >
-                <span>🔎</span>
-                <a href={certificate.link} target='_blank' rel='noreferrer'>
-                  🔗
-                </a>
-              </div>
+            <div className='certificate-overlay hide'></div>
+            <div onClick={(e) => handleOpenModal(e, certificate)} className='certificate-zoom hide'>
+              <span>🔎</span>
+              <a href={certificate.link} target='_blank' rel='noreferrer'>
+                🔗
+              </a>
             </div>
           </div>
         ))}
       </div>
 
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel='Example Modal'
-      >
-        <img className='img-modal' src={`./img/certificate/${curImage}`} alt='{certificate.cert}' />
-        <span className='button--modal__close' onClick={closeModal}>
-          &times;
-        </span>
-      </Modal>
+      <Lightbox
+        styles={{
+          container: {
+            backgroundColor: 'rgba(0, 0, 0, .3)',
+            fontSize: '1.4rem',
+            letterSpacing: '1.5px',
+          },
+        }}
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        slides={slides}
+        plugins={[Captions]}
+        render={{
+          buttonPrev: slides.length <= 1 ? () => null : undefined,
+          buttonNext: slides.length <= 1 ? () => null : undefined,
+        }}
+      />
     </>
   );
 };
