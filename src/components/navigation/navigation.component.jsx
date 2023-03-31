@@ -16,8 +16,8 @@ const Navigation = () => {
       }
     };
 
-    sectionClass.addEventListener('mouseover', handleHover.bind(0.2));
-    sectionClass.addEventListener('mouseout', handleHover.bind(0.5));
+    sectionClass.addEventListener('mouseover', handleHover.bind(0.5));
+    sectionClass.addEventListener('mouseout', handleHover.bind(1));
 
     // window.addEventListener("keydown", (event) => {
     //     console.log("tada");
