@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
-import Lightbox from 'react-18-image-lightbox';
-
-import 'react-18-image-lightbox/style.css';
-
+import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
 import './card-item.styles.scss';
 
 const CardItem = ({ portfolio }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [index, setIndex] = useState(0);
   const { imgUrl, name, shortDescription, gallery, demoVideo, urlProject, repo } = portfolio;
 
-  const curImage = gallery[index];
-  const nextImage = gallery[(index + 1) % gallery.length];
-  const prevImage = gallery[(index + gallery.length - 1) % gallery.length];
+  const slides = gallery.map(({ path, description }) => {
+    return {
+      src: path,
+      title: name,
+      description,
+    };
+  });
+
   return (
     <div className='portfolio-card'>
       <div className='portfolio-card-front'>
@@ -60,19 +64,19 @@ const CardItem = ({ portfolio }) => {
       </div>
 
       <ReactTooltip />
-      {isOpen && (
-        <Lightbox
-          enableZoom={false}
-          imageTitle={curImage.description}
-          imagePadding={15}
-          mainSrc={curImage.path}
-          nextSrc={nextImage.path}
-          prevSrc={prevImage.path}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() => setIndex((index + gallery.length - 1) % gallery.length)}
-          onMoveNextRequest={() => setIndex((index + 1) % gallery.length)}
-        />
-      )}
+      <Lightbox
+        styles={{
+          container: {
+            backgroundColor: 'rgba(0, 0, 0, .3)',
+            fontSize: '1.4rem',
+            letterSpacing: '1.5px',
+          },
+        }}
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        slides={slides}
+        plugins={[Captions]}
+      />
     </div>
   );
 };
