@@ -1,14 +1,14 @@
+@import '../../sass/mixins';
+
 .certificates {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 
-  @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
+  @include respond(phone) {
+    row-gap: 0.8rem;
+    column-gap: 0.5rem;
   }
 }
 
@@ -20,7 +20,18 @@
 
   &-overlay,
   img {
-    width: 39rem;
+    width: 35rem;
+
+    @include respond(tab-land) {
+      width: 30rem;
+    }
+
+    @include respond(tab-port) {
+      width: 27rem;
+    }
+    @include respond(phone) {
+      width: 16rem;
+    }
   }
 
   &:hover {
