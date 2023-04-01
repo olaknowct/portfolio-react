@@ -10,22 +10,6 @@
   text-align: center;
   font-weight: 100;
 
-  @include respond(tab-land) {
-    height: 11.5rem; // typed + sub
-  }
-
-  @include respond(tab-port) {
-    height: 9.6rem; // typed + sub
-  }
-
-  @media screen and (max-width: 700px) {
-    height: 8.2rem; // typed + sub
-  }
-
-  @include respond(phone) {
-    height: 5.9rem; // typed + sub
-  }
-
   &-primary {
     font-size: 7.4rem;
   }
@@ -35,6 +19,8 @@
   }
 
   @include respond(tab-land) {
+    height: 11.5rem; // typed + sub
+
     &-primary {
       font-size: 6.2rem;
     }
@@ -45,6 +31,8 @@
   }
 
   @include respond(tab-port) {
+    height: 9.6rem; // typed + sub
+
     &-primary {
       font-size: 5.2rem;
     }
@@ -55,6 +43,8 @@
   }
 
   @media screen and (max-width: 700px) {
+    height: 8.2rem; // typed + sub
+
     &-primary {
       font-size: 4.4rem;
     }
@@ -65,12 +55,16 @@
   }
 
   @include respond(phone) {
+    height: 5.3rem; // typed + sub
+
     &-primary {
-      font-size: 3rem;
+      letter-spacing: 0.3rem;
+      font-size: 2.8rem;
     }
 
     &-sub {
-      font-size: 1.4rem;
+      letter-spacing: 0.7rem;
+      font-size: 1.2rem;
     }
   }
 }
