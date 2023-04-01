@@ -1,6 +1,9 @@
+@import '../sass/mixins';
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .margin-bottom-md {
@@ -9,6 +12,14 @@
 
 .margin-bottom-sm {
   margin-bottom: 3.2rem !important;
+
+  @include respond(tab-land) {
+    margin-bottom: 2.8rem !important;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 2rem !important;
+  }
 }
 
 .margin-top-md {
