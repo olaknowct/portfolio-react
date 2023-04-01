@@ -30,7 +30,7 @@ const AboutPage = () => {
       <figure className='about-me__img'>
         <img className='fade-in ' src='./img/chris.jpg' alt='' />
       </figure>
-      <div className='about-me__description margin-top-sm'>
+      <div className='about-me__description'>
         <span ref={intro} />
       </div>
     </section>
