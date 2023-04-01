@@ -62,7 +62,9 @@
 
     @include respond(phone);
     @include respond(tab-port) {
-      font-size: 1rem;
+      padding: 1rem;
+
+      font-size: 0.8rem;
     }
 
     color: #2c3e50;
@@ -79,7 +81,7 @@
 
       span {
         @include respond(phone) {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
         }
       }
     }
