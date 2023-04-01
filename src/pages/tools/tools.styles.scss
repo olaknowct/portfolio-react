@@ -1,14 +1,23 @@
+@import '../../sass/mixins';
+
 .tools {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   row-gap: 3rem;
 
-  @media screen and (max-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
+  @include respond(tab-land) {
+    grid-template-columns: repeat(8, 1fr);
   }
 
-  @media screen and (max-width: 800px) {
-    grid-template-columns: repeat(4, 1fr);
+  @include respond(tab-port) {
+    padding: 0 5rem;
+
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  @include respond(phone) {
+    padding: 0 1rem;
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
