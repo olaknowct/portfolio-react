@@ -58,6 +58,21 @@
     transform: translate(-50%, -50%);
     font-size: 3rem;
     cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      a,
+      span {
+        padding: 0 0.3rem;
+      }
+    }
+
+    a:visited,
+    a:hover,
+    a:active,
+    a:link {
+      text-decoration: none;
+    }
   }
 }
 
