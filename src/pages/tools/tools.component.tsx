@@ -3,7 +3,7 @@ import './tools.styles.scss';
 import Tool from '../../components/tool/tool.component';
 
 const ToolsPage = () => {
-  const tools = [
+  const tools: string[] = [
     'JavaScript',
     'ReactJs',
     'Redux',

@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactSVG } from 'react-svg';
 import './tool.styles.scss';
 
-const Tool = ({ tool }) => {
+const Tool = ({ tool }: { tool: string }) => {
   return (
     <div className='tool'>
       <div className='tool-svg__box'>
