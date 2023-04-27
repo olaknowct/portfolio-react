@@ -1,10 +1,37 @@
 import React from 'react';
-import CardItem from './../../components/card/card-item.component';
+import CardItem from '../../components/card/card-item.component';
 
 import './portfolio.styles.scss';
 
+type Gallery = {
+  path: string;
+  description: string;
+};
+
+type Repo = {
+  isAvailable: boolean;
+  github: string;
+};
+
+type DemoVid = {
+  isAvailable: boolean;
+  clipchamp: string;
+};
+
+export type Portfolio = {
+  id: number;
+  name: string;
+  shortDescription: string;
+  technology: string[];
+  gallery: Gallery[];
+  urlProject: string;
+  demoVideo: DemoVid;
+  repo: Repo;
+  imgUrl: string;
+};
+
 const PortfolioPage = () => {
-  const portfolios = [
+  const portfolios: Portfolio[] = [
     {
       id: 1,
       name: 'ChrisTours',
@@ -1024,19 +1051,9 @@ const PortfolioPage = () => {
     // },
   ];
 
-  const compare = (a, b) => {
-    if (a.id < b.id) {
-      return -1;
-    }
-    if (a.id > b.id) {
-      return 1;
-    }
-    return 0;
-  };
-
   return (
     <section className='portfolio fade-in'>
-      {portfolios.sort(compare).map((portfolio) => (
+      {portfolios.map((portfolio) => (
         <CardItem key={portfolio.id} portfolio={portfolio} />
       ))}
     </section>

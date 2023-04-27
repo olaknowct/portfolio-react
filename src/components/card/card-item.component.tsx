@@ -5,8 +5,13 @@ import Captions from 'yet-another-react-lightbox/plugins/captions';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import './card-item.styles.scss';
+import { Portfolio } from '../../pages/portfolio/portfolio.component';
 
-const CardItem = ({ portfolio }) => {
+type CardItemProps = {
+  portfolio: Portfolio;
+};
+
+const CardItem = ({ portfolio }: CardItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const { imgUrl, name, shortDescription, gallery, demoVideo, urlProject, repo } = portfolio;
 
@@ -45,7 +50,7 @@ const CardItem = ({ portfolio }) => {
               ''
             )}
 
-            <button type='button' onClick={() => setIsOpen(true)} data-tip='show gallery' href=''>
+            <button type='button' onClick={() => setIsOpen(true)} data-tip='show gallery'>
               <img src='./img/image-gallery.png' alt='' />
             </button>
             <a href={urlProject} target='_blank' data-tip='navigate to project' rel='noreferrer'>
