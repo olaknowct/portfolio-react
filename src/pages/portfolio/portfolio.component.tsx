@@ -137,7 +137,7 @@ const PortfolioPage = () => {
       },
       repo: {
         isAvailable: true,
-        github: 'https://github.com/olaknowct/maxcloth',
+        github: 'https://github.com/olaknowct/max-clothing_v2',
       },
       imgUrl: './img/thumbnails/maxcloth.png',
     },
